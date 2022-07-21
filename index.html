@@ -10,10 +10,35 @@
     <script>
         //function called getComputerChoice that will random return either 'Rock','Paper' or 'Scissors'
         
-            const compArray = ['Rock', 'Paper', 'Scissors'];
-            const randomChoice = compArray[Math.floor(Math.random() * compArray.length)];
-            console.log(randomChoice);
-            
+        //const compArray = ['Rock', 'Paper', 'Scissors'];
+         //const randomChoice = compArray[Math.floor(Math.random() * compArray.length)];
+        //console.log(randomChoice);
+       
+        //function that plays 1 round of Rock Paper Scissors. Takes 2 parameters, playerSelection and computerSelection and then returns string declaring winner
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === 'rock' && computerSelection === 'Paper') {
+                return 'You lose! Paper beats rock!';
+            } else if (playerSelection === 'paper' && computerSelection === 'Scissors') {
+                return 'You lose! Scissors beats paper!';
+            } else if (playerSelection === 'scissors' && computerSelection === 'Rock') {
+                return 'You lose! Rock beats paper!';
+            } else if (playerSelection === 'paper' && computerSelection === 'Rock') {
+                return 'You win! Paper beats rock!';
+            } else if (playerSelection === 'scissors' && computerSelection === 'Paper') {
+                return 'You win! Scissors beat paper!';
+            } else if (playerSelection === 'rock' && computerSelection === 'Scissors') {
+                return 'You win! Rock beats scissors!';
+            } else if (playerSelection === computerSelection) {
+                return 'You\'ve tied';
+            } else {
+                return 'Input a valid choice: rock, paper or scissors!'
+            }
+        }
+
+        console.log(game('Scissors', 'Scissors'))
+
+        
     </script>
 </body>
 </html>
