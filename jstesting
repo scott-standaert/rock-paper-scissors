@@ -1,10 +1,38 @@
-const computerSelection = getComputerChoice();
+const computerSelection = getcomputerSelection();
 const playerSelection = prompt('Rock! Paper! Scissors! Shoot!');
+let playerScore = 0
+let computerScore = 0
 
-
-function getComputerChoice(){
+function getcomputerSelection(){
         var computerValues = ['Rock', 'Paper', 'Scissors'];
         computermath = computerValues[Math.floor(Math.random() * computerValues.length)];
         return computermath
     }
 
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'Paper') {
+            computerScore++
+            return 'You lose! Paper beats rock!';
+        } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'Scissors') {
+            computerScore++
+            return 'You lose! Scissors beats paper!';
+        } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'Rock') {
+            computerScore++
+            return 'You lose! Rock beats paper!';
+        } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'Rock') {
+            playerScore++
+            return 'You win! Paper beats rock!';
+        } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'Paper') {
+            playerScore++
+            return 'You win! Scissors beat paper!';
+        } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'Scissors') {
+            playerScore++
+            return 'You win! Rock beats scissors!';
+        } else if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+            return 'You\'ve tied!';
+        } else {
+            return 'Input a valid choice: rock, paper or scissors!'
+        }
+    }
+
+    console.log(playRound(playerSelection, computerSelection))
