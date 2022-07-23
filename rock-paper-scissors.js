@@ -1,8 +1,8 @@
-let computerScore = 0
-let playerScore = 0
-// let playerChoice = prompt('Rock! Paper! Scissors! Shoot!)
+let computerScore = 0;
+let playerScore = 0;
+let playerChoice = prompt('Rock! Paper! Scissors! Shoot!');
+// let computerChoice = getComputerChoice()
 //starts game for testing
-let playerChoice = 'Rock';
 let computerChoice = 'Paper';
 console.log(playRound(playerChoice, computerChoice))
 
@@ -51,4 +51,4 @@ function decideWinner(playerScore, computerScore) {
          //const randomChoice = compArray[Math.floor(Math.random() * compArray.length)];
         //console.log(randomChoice);
 
-//need to finish getComputerChoice() function, playerChoice prompt and game() function
+//need to finish getComputerChoice() function,and game() function
