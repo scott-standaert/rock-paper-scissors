@@ -1,0 +1,10 @@
+const computerSelection = getComputerChoice();
+const playerSelection = prompt('Rock! Paper! Scissors! Shoot!');
+
+
+function getComputerChoice(){
+        var computerValues = ['Rock', 'Paper', 'Scissors'];
+        computermath = computerValues[Math.floor(Math.random() * computerValues.length)];
+        return computermath
+    }
+
