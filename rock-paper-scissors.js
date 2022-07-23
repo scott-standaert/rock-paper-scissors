@@ -1,10 +1,13 @@
 let computerScore = 0;
 let playerScore = 0;
 let playerChoice = prompt('Rock! Paper! Scissors! Shoot!');
-// let computerChoice = getComputerChoice()
-//starts game for testing
-let computerChoice = 'Paper';
-console.log(playRound(playerChoice, computerChoice))
+let computerValues = ['Rock', 'Paper', 'Scissors'];
+    getComputerChoice(...computerValues)
+
+    function getComputerChoice(){
+        let computerChoice = computerValues[Math.floor(Math.random() * computerValues.length)];
+        return computerChoice;
+    }
 
 //function that plays 1 round of Rock Paper Scissors. Takes 2 parameters, playerChoice and computerChoice and then returns string declaring winner
 function playRound(playerChoice, computerChoice) {
@@ -45,10 +48,4 @@ function decideWinner(playerScore, computerScore) {
 }
 
 
-//function called getComputerChoice that will random return either 'Rock','Paper' or 'Scissors'
-        
-        //const compArray = ['Rock', 'Paper', 'Scissors'];
-         //const randomChoice = compArray[Math.floor(Math.random() * compArray.length)];
-        //console.log(randomChoice);
-
-//need to finish getComputerChoice() function,and game() function
+//need to finish game() function
