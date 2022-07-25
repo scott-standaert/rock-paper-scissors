@@ -9,23 +9,24 @@ function getcomputerSelection(){
 function playRound() {
     const playerSelection = prompt('Rock! Paper! Scissors! Shoot!');
     const computerSelection = getcomputerSelection();
+
     if ((playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') 
 || (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') 
 || (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper')){
-    return `You win! ${playerSelection} beats ${computerSelection}`;
     playerScore++;
+    return `You win! ${playerSelection} beats ${computerSelection}! The score is Player: ${playerScore} | Computer: ${computerScore}`;
 
 } else if ((playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') 
 || (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') 
 || (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock')){
-    return `You lose! ${computerSelection} beats ${playerSelection}`;
     computerScore++;
+    return `You lose! ${computerSelection} beats ${playerSelection}! The score is Player: ${playerScore} | Computer: ${computerScore}`;
 
 } else if (playerSelection.toLowerCase() == computerSelection){
-    return `Tie! You have both chose ${playerSelection}`;
+    return `Tie! You have both chose ${playerSelection}! The score is Player: ${playerScore} | Computer: ${computerScore}`;
 
 } else {
-    return 'Please input a valid choice: rock, paper or scissors!'
+    return 'Please input a valid choice: rock, paper or scissors!';
 }
 }
 
